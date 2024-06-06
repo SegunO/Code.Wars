@@ -45,6 +45,29 @@
         .hero {
             margin: 20px auto;
             max-width: 80%;
+            position: relative;
+        }
+        .media-player {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .media-player button {
+            background-color: #2d2d2d;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .media-player button:hover {
+            background-color: #444444;
         }
     </style>
 </head>
@@ -61,7 +84,28 @@
     <div class="content">
         <h1>Welcome to Code.Wars</h1>
         <p>Experience the fusion of futuristic sounds and visuals.</p>
-        <img src="Code.Wars-Segun-pic.webp" alt="Band Image" class="hero">
+        <div class="hero">
+            <img src="Code.Wars-Segun-pic.webp" alt="Band Image" class="hero">
+            <div class="media-player">
+                <button id="playPauseBtn">Play</button>
+                <audio id="audioPlayer" src="Dont_Go_To_Heaven__G_Major__110BPM.wav"></audio>
+            </div>
+        </div>
     </div>
+
+    <script>
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        playPauseBtn.addEventListener('click', () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                playPauseBtn.textContent = 'Pause';
+            } else {
+                audioPlayer.pause();
+                playPauseBtn.textContent = 'Play';
+            }
+        });
+    </script>
 </body>
 </html>
