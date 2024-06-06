@@ -49,22 +49,44 @@
         }
         .media-player {
             position: absolute;
-            top: 10px;
+            top: -40px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
             align-items: center;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+            border-radius: 10px;
+            width: 80%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .media-player img {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
             border-radius: 5px;
+        }
+        .media-player .info {
+            flex: 1;
+        }
+        .media-player .info h3 {
+            margin: 0;
+            color: white;
+            font-size: 1.2em;
+        }
+        .media-player .info p {
+            margin: 0;
+            color: #ccc;
+            font-size: 0.9em;
         }
         .media-player button {
             background-color: #2d2d2d;
             border: none;
             color: white;
-            padding: 10px;
+            padding: 10px 15px;
             border-radius: 50%;
             cursor: pointer;
+            font-size: 1em;
         }
         .media-player button:hover {
             background-color: #444444;
@@ -87,6 +109,11 @@
         <div class="hero">
             <img src="Code.Wars-Segun-pic.webp" alt="Band Image" class="hero">
             <div class="media-player">
+                <img src="CodeWars_Logo_No_Background_Outside.png" alt="Album Art">
+                <div class="info">
+                    <h3>Dont Go To Heaven - G Major - 110BPM</h3>
+                    <p>Segun Oluwadele · May 11, 2024 · 02:24</p>
+                </div>
                 <button id="playPauseBtn">Play</button>
                 <audio id="audioPlayer" src="Dont_Go_To_Heaven__G_Major__110BPM.wav"></audio>
             </div>
