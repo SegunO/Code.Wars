@@ -21,6 +21,7 @@
             position: fixed;
             width: 100%;
             top: 0;
+            z-index: 1;
         }
         .navbar a {
             color: white;
@@ -38,6 +39,10 @@
         }
         .logo {
             width: 200px;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
         }
         .hero {
             margin: 20px auto;
@@ -46,6 +51,7 @@
     </style>
 </head>
 <body>
+    <img src="CodeWars_Logo_No_Background_Outside.png" alt="Code.Wars Logo" class="logo">
     <div class="navbar">
         <a href="index.html">Home</a>
         <a href="our-story.html">Our Story</a>
@@ -54,7 +60,6 @@
     </div>
 
     <div class="content">
-        <img src="CodeWars_Logo_No_Background_Outside.png" alt="Code.Wars Logo" class="logo">
         <h1>Welcome to Code.Wars</h1>
         <p>Experience the fusion of futuristic sounds and visuals.</p>
         <img src="Code.Wars-Segun-pic.webp" alt="Band Image" class="hero">
