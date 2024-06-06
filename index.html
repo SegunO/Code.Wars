@@ -33,14 +33,18 @@
             background-color: rgba(255, 255, 255, 0.2);
             border-radius: 5px;
         }
+        .logo {
+            width: 180px; /* Increase the size of the logo */
+            margin: 70px auto 20px auto; /* Move the logo down below the navbar */
+            display: block;
+        }
         .content {
-            padding: 120px 20px;
+            padding: 140px 20px 20px 20px;
             text-align: center;
         }
-        .logo {
-            width: 150px;
+        .hero {
             margin: 20px auto;
-            display: block;
+            max-width: 80%;
         }
         .media-player-container {
             margin: 20px auto;
@@ -91,9 +95,39 @@
         .coming-soon {
             margin-bottom: 40px; /* Move the text up by reducing the margin-bottom */
         }
-        .hero {
-            margin: 20px auto;
-            max-width: 80%;
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 5px;
+            }
+            .navbar a {
+                padding: 10px;
+                width: 100%;
+                text-align: center;
+            }
+            .logo {
+                width: 150px;
+                margin: 50px auto 20px auto; /* Adjusted for mobile */
+            }
+            .content {
+                padding: 100px 10px 10px 10px;
+            }
+            .media-player-container, .hero {
+                width: 100%;
+            }
+            .media-player {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .media-player img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            .media-player button {
+                margin-top: 10px;
+                width: 100%;
+            }
         }
     </style>
 </head>
